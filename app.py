@@ -12,7 +12,7 @@ load_dotenv(override=True)
 SENDER_EMAIL = os.getenv("SENDER_EMAIL")
 SENDER_PASSWORD = os.getenv("SENDER_PASSWORD")
 
-app = FastAPI()
+app = FastAPI("SMTP Gmail APP")
 
 class EmailRequest(BaseModel):
     to: str
